@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Piedra, Papel, Tijeras, Lagarto, Spock</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <div class="container">
+    <h1>Piedra, Papel, Tijeras, Lagarto, Spock</h1>
+    <div class="buttons">
+      <button data-choice="piedra">🪨 Piedra</button>
+      <button data-choice="papel">📄 Papel</button>
+      <button data-choice="tijeras">✂️ Tijeras</button>
+      <button data-choice="lagarto">🦎 Lagarto</button>
+      <button data-choice="spock">🖖 Spock</button>
+    </div>
+    <div class="result">
+      <p><strong>Tú:</strong> <span id="playerChoice">-</span></p>
+      <p><strong>Máquina:</strong> <span id="computerChoice">-</span></p>
+      <p id="outcome">Elige una opción para empezar</p>
+    </div>
+    <button id="restart">Reiniciar marcador</button>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>

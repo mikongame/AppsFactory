@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .notebook {
+    background-image: url(img/fondo.png);
+    background-repeat: repeat-y;
+    height:800px;
+    width:100%;
+    }
+
+    .multi {
+        width: 400px;
+        height: 400px;
+        border: 1px solid black;
+        background: url(/img/html-left.png) no-repeat center left, url(img/html-right.png) no-repeat right;
+    }
+
+    .pic-and-gradient {
+      width: 400px;
+      height: 400px;
+      border: 1px solid black;
+      background: url(img/tijeras.svg) no-repeat bottom right, url(img/mundo.svg) no-repeat top left, radial-gradient(ellipse at center, #f931a3 0%, #47aa20 51%, #7db9e8 100%);
+      background-size: auto auto, 50% 50%, auto auto;
+    }
+
+    .shadow-div{
+      background:red;
+      width:500px;
+      height:500px;
+      box-shadow: 10px 50px 100px green, inset 10px 50px 100px blue;	
+      border-radius:0px 50px 100px 150px;
+    }
+
+    .shadow-div h1{
+      text-shadow: 20px 5px 5px red
+    }
+
+</style>
+  </style>
+</head>
+<body>
+  <div class="notebook">
+  </div>
+<br>
+    <div class="multi">
+    </div>
+    <br>
+    <div class="pic-and-gradient">
+    </div>
+    <br>
+    <div class="shadow-div">
+      <h1>Mikon Insights</h1>
+    </div>
+</body>
+</html>

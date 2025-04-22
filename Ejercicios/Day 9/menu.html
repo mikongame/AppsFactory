@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    @font-face {
+      font-family: flechita;
+      src: url(img/Arrows_tfb.ttf);
+    }
+
+    .menu-horizontal {
+      padding-left: 0;
+      width: 300px;
+    }
+
+    .menu-horizontal li a {
+      background: pink;
+      border: solid black 6px;
+      border-radius: 10px;
+      padding: 15px;
+      display: block;
+      color: black;
+      text-decoration: none;
+    }
+
+    .menu-horizontal li:hover > a {
+      color: red;
+      background: salmon;
+    }
+
+    .menu-horizontal li {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      position: relative;
+    }
+
+    .menu-horizontal li.hasChildren > a:after {
+      color: purple;
+      content: " o";
+      font-family: flechita;
+    }
+
+    .menu-horizontal li.hasChildren ul {
+      position: absolute;
+      padding: 0;
+      opacity: 0;
+      overflow: hidden;
+      max-height: 0;
+      transition: 0.5s;
+      top: 0;
+      left: 100%;
+    }
+
+    .menu-horizontal li.hasChildren li {
+      display: block;
+    }
+
+    .menu-horizontal li.hasChildren:hover ul {
+      opacity: 1;
+      max-height: 800px;
+    }
+  </style>
+</head>
+
+<body>
+  <ul class="menu-horizontal">
+      <li><a href="#" title="la pagina de inicio">home</a></li>
+      <li class="hasChildren"><a href="#" title="las fotos de mis viejes">fotos</a>
+          <ul>
+              <li><a href="#" title="la pagina de inicio">home</a></li>
+              <li><a href="#" title="las fotos de mis viejes">fotos</a>
+              </li>
+              <li><a href="#" title="los videos de mis viajes">videos</a></li>
+              <li><a href="#" title="ponte en contacto conmigo">contact</a></li>
+          </ul>
+      </li>
+      <li><a href="#" title="los videos de mis viajes">videos</a></li>
+      <li><a href="#" title="ponte en contacto conmigo">contact</a></li>
+  </ul>
+
+</body>
+</html>

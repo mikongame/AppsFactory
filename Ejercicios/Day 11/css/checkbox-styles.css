@@ -1,0 +1,29 @@
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"] + label {
+  display: inline-block;
+  width: 19px;
+  height: 19px;
+  background: url(/img/check_radio_sheet.png);
+  cursor: pointer;
+}
+
+input[type="checkbox"]:checked + label {
+  background: url(/img/check_radio_sheet.png) -19px
+    top;
+}
+
+input[type="radio"] + label {
+  display: inline-block;
+  width: 19px;
+  height: 19px;
+  background: url(/img/check_radio_sheet.png);
+  cursor: pointer;
+}
+
+input[type="radio"]:checked + label {
+  background: url(/img/check_radio_sheet.png) -19px
+    top;
+}

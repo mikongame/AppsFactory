@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hypnosis Spiral</title>
+  <style>
+    @keyframes ilusion {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    body {
+      margin: 0;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: white; 
+    }
+
+    img {
+      width: 100vw;
+      height: 100vh;
+      object-fit: contain;
+    }
+
+    .cool-animation {
+      animation: ilusion 3s infinite linear;
+    }
+  </style>
+</head>
+
+<body>
+  <img class="cool-animation" src="img/vecteezy_black-and-white-alternating-stripe-circles-swirl-template_17377664.jpg" alt="Hypnosis Spiral">
+</body>
+</html>

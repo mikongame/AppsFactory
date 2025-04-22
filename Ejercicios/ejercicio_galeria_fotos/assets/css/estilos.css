@@ -1,0 +1,159 @@
+/* Estilo base y tipografía */
+body {
+	font-family: 'Poppins', 'Segoe UI', sans-serif;
+	background-color: #f0f4f8;
+	margin: 0;
+	padding-top: 2em;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+/* Caja contenedora principal */
+#contenedor {
+	width: 80%;
+	max-width: 900px;
+	background-color: #ffffff;
+	padding: 2em;
+	border-radius: 12px;
+	box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+	text-align: center;
+}
+
+/* Títulos */
+h2 {
+	color: #001F54;
+	margin-bottom: 20px;
+	font-weight: 600;
+}
+
+/* Fototeca */
+#fotos img {
+	width: 120px;
+	height: 90px;
+	margin: 10px;
+	border-radius: 12px;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+	cursor: pointer;
+	transition: transform 0.2s ease, filter 0.3s ease;
+	object-fit: cover;
+}
+
+#fotos img:hover {
+	transform: scale(1.05);
+	filter: brightness(1.1) drop-shadow(0 0 6px #5A9BD5);
+}
+
+/* Galería de fotos seleccionadas */
+.imagenesGaleria {
+	position: relative;
+	display: inline-block;
+	width: 260px;
+height: 200px;
+	margin: 10px;
+	border-radius: 12px;
+	overflow: hidden;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.imagenesGaleria:hover {
+	transform: scale(1.05);
+	filter: brightness(1.1) drop-shadow(0 0 6px #EA711B);
+}
+
+.imagenGaleria {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	cursor: pointer;
+	transition: transform 0.2s ease, filter 0.3s ease;
+	display: block;
+}
+
+/* Botón borrar (cruz roja) */
+.borrar {
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	width: 20px;
+	height: 20px;
+	cursor: pointer;
+	transition: transform 0.2s ease;
+	filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.3));
+}
+
+.borrar:hover {
+	transform: scale(1.3);
+	filter: brightness(1.1) drop-shadow(0 0 8px #ea1b1b);
+}
+
+/* Lightbox */
+#lightbox {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, 0.6);
+	display: none;
+	justify-content: center;
+	align-items: center;
+	z-index: 1000;
+	display: flex;
+	flex-direction: row;
+	gap: 20px;
+}
+
+#fotoLightbox {
+	width: 50%;
+	max-width: 800px;
+	border-radius: 12px;
+	box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+#anterior, #siguiente {
+	width: 50px;
+	cursor: pointer;
+	transition: transform 0.2s ease;
+}
+
+#anterior:hover, #siguiente:hover {
+	transform: scale(1.2);
+}
+
+#siguiente {
+	transform: rotate(180deg);
+}
+
+/* Responsive para pantallas pequeñas */
+@media (max-width: 768px) {
+	.imagenGaleria {
+			width: 180px;
+			height: 140px;
+	}
+
+	#fotoLightbox {
+			width: 80%;
+	}
+}
+
+#boton-vaciar {
+	margin-top: 1em;
+	padding: 10px 20px;
+	font-size: 1em;
+	background-color: #001F54;
+	color: white;
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
+	box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+	transition: background-color 0.3s, transform 0.1s ease;
+}
+
+#boton-vaciar:hover {
+	background-color: #0047AB;
+	font-weight: bold;
+	transform: scale(1.03);
+}
+
+

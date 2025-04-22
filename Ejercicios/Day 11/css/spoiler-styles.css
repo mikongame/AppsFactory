@@ -1,0 +1,13 @@
+input[type="checkbox"] {
+  display: none;
+}
+label {
+  background: pink;
+  cursor: pointer;
+}
+input[type="checkbox"] + label + .contenidoOculto {
+  opacity: 0;
+}
+input[type="checkbox"]:checked + label + .contenidoOculto {
+  opacity: 1;
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .barra-habilidad-wrapper {
+        width: 500px;
+        height: 30px;
+        border: 1px solid black
+    }
+
+    .barra-habilidad-wrapper .barrita {
+        height: 100%;
+        background: green;
+        width:0;
+    }
+
+    .barra-habilidad-wrapper:hover .barrita{
+        animation: muevete 1s forwards;
+
+    }
+
+    @keyframes muevete {
+        to {
+            width: 80%
+        }
+    }
+
+    .barra-corazones-wrapper {
+      width: 500px;
+      height: 30px;
+      border: 1px solid black;
+    }
+
+    .barra-corazones-wrapper .rojo {
+      height: 100%;
+      background: red;
+      width:0;
+    }
+
+    .barra-corazones-wrapper .barrita {
+      background: url(img/corazon-mask.png);
+      background-size: auto 100%;
+      height: 100%;
+      width: 100%;
+    }
+
+    .barra-corazones-wrapper:hover .rojo {
+      animation: muevete-corazones 1s forwards;
+    }
+
+    @keyframes muevete-corazones {
+      to {
+        width: 80%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="barra-habilidad-wrapper">
+    <div class="barrita"></div>
+</div>
+
+  <div class="barra-corazones-wrapper">
+      <div class="rojo">
+          <div class="barrita">
+          </div>
+      </div>
+  </div>
+</body>
+</html>

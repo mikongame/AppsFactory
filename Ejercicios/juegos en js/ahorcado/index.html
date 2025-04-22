@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Juego del Ahorcado con Javascript">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ahorcado</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="col info">
+      <h1>Juego del Ahorcado</h1>
+      <p class="hiddenWord">_ _ _ _ _ _ _ _ _ _ _ _</p>
+      <p>Letras usadas: 
+        <span class="usedLetters correct"></span> 
+        <span class="usedLetters wrong"></span>
+      </p>
+      <p>Introduce una letra:</p>
+      <input type="text" maxlength="1" autofocus>
+      <button id="check">Verificar letra</button>
+      <button id="restart">Reiniciar juego</button>
+      <p class="message"></p>
+    </div>
+    <div class="col">
+      <div class="ahorcado"></div>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>

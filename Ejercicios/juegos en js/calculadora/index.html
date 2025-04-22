@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Calculadora Básica</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <main>
+    <h1>Calculadora</h1>
+
+    <section class="calculadora" aria-label="Calculadora simple de dos números">
+      <input type="number" id="n1" placeholder="Número 1" aria-label="Primer número" />
+      <input type="number" id="n2" placeholder="Número 2" aria-label="Segundo número" />
+
+      <div class="botones-operacion">
+        <button id="suma" aria-label="Sumar">+</button>
+        <button id="resta" aria-label="Restar">−</button>
+        <button id="multiplicacion" aria-label="Multiplicar">×</button>
+        <button id="division" aria-label="Dividir">÷</button>
+      </div>
+
+      <button id="calcular" aria-label="Calcular resultado">🧮 Calcular</button>
+
+      <output id="resultado" aria-live="polite" role="status">Resultado: </output>
+    </section>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

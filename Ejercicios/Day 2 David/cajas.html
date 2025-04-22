@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        label {display: block;}
+    </style>
+</head>
+<body>
+    <form action="">
+        <div>
+            <label for="nombre">Nombre del cliente</label>
+            <input type="text" id="nombre">
+        </div>
+        <div>
+            <label for="material">Material caja</label>
+            <select id="material">
+                <option value="md">Madera</option>
+                <option value="pl" selected>Plástico</option>
+                <option value="mt">Metal</option>
+            </select>
+        </div>
+        <div>
+            <label for="dimension">Dimensión de la caja</label>
+            <input type="radio" name="dimension" value="diminuta">Diminuta<br>
+            <input type="radio" name="dimension" value="pequeña" checked>Pequeña<br>
+            <input type="radio" name="dimension" value="grande">Grande<br>
+        </div>
+        <div>
+            <label for="comentarios">Comentarios</label>
+            <textarea id="comentarios"></textarea>
+        </div>
+        <div>
+            <button type="button">Enviar</button>
+        </div>
+        <div>
+            <input type="text" id="mensaje" disabled>
+        </div>
+    </form>
+    <script>
+        //detectar pulsación del boton de enviar
+        document.querySelector('button').onclick = confeccionarMensaje
+
+        //función para confeccionar el mensaje
+        function confeccionarMensaje() {
+            //limpiar cualquier mensaje anterior
+            document.querySelector('#mensaje').value = ''
+
+            //recuperar datos del formulario
+            let nombre = document.querySelector('#nombre').value.trim()
+            let material = document.querySelector('#material').value.toLowerCase() 
+            let dimension = document.querySelector('[name=dimension]:checked')?.value
+            let comentarios = document.querySelector('#comentarios').value.trim()           
+
+            //validar nombre, material y dimensión informados
+            if (nombre == '') {
+                window.alert('El nombre es obligatorio')
+                return
+            } 
+
+            //undefined, null, '', 0, false --> false
+            if (!dimension) { //if (dimension == undefined)
+                window.alert('Te has pasado de listo y te hemos pillao')
+                return 
+            }
+
+            //confeccionar el mensaje
+            //let mensaje = nombre + ' ha pedido una caja de ' + material + ' con unas dimensiones ' + dimension + '.' + comentarios
+
+            let mensaje = `${nombre} ha pedido una caja de ${material} con unas dimensiones ${dimension}. ${comentarios}`
+
+            //enviar el mensaje al formulario
+            document.querySelector('#mensaje').value = mensaje
+        }
+
+    </script>
+</body>
+</html>

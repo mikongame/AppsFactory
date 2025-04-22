@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    @font-face {
+      font-family: fuente;
+      src: url(img/fuente.woff);
+    }
+
+    * {
+      margin: 0px;
+      padding: 0px;
+    }
+
+    body {
+      font-family: fuente;
+      font-weight: bold;
+    }
+
+    .wrapper {
+      width: 100%;
+    }
+
+    .header {
+      display: inline-block;
+      width: 100%;
+      text-align: center;
+      position: fixed;
+      background-color: rgba(22, 160, 133, 0.7);
+    }
+
+    .menu li {
+      display: inline-block;
+    }
+
+    .menu {
+      display: inline-block;
+      list-style: none;
+      text-align: center;
+    }
+
+    .menu a {
+      display: block;
+      padding: 25px;
+      margin-left: 50px;
+      margin-right: 50px;
+      font-family: "Raleway", sans-serif;
+    }
+
+    .menu a:hover {
+      background-color: rgba(22, 160, 133, 0.2);
+    }
+
+    .menu a {
+      text-decoration: none;
+      color: #ffffff;
+      font-weight: bold;
+    }
+
+    .grassy {
+      text-align: center;
+      background-color: #333333;
+      padding: 150px;
+      margin-top: 0px;
+    }
+
+    .grassy h1 {
+      font-family: "Raleway", sans-serif;
+      color: #ffffff;
+      font-size: 5em;
+      font-weight: 5px;
+      padding-top: 20px;
+    }
+
+    .grassy h2 {
+      font-family: "Raleway", sans-serif;
+      color: #ffffff;
+      font-size: 0.8em;
+    }
+
+    .pic {
+      background: url(img/pic01.jpg);
+      height: 500px;
+    }
+
+    .caja {
+      background-color: #ffffff;
+      width: 1024px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .container {
+      margin: auto;
+      margin-top: 10px;
+      overflow: hidden;
+    }
+
+    .col_left {
+      font-family: "Raleway", sans-serif;
+      color: #333333;
+      text-align: justify;
+      width: 700px;
+      margin-bottom: 70px;
+      display: inline-block;
+      vertical-align: top;
+      box-sizing: border-box;
+      padding-right: 40px;
+    }
+
+    .col_left h2 {
+      font-family: "Raleway", sans-serif;
+      color: #16a085;
+      text-transform: capitalize;
+      font-weight: bold;
+    }
+
+    h2 {
+      margin-bottom: 30px;
+    }
+
+    .col_left h3 {
+      font-family: "Raleway", sans-serif;
+      color: #000000;
+
+      font-size: 0.9em;
+      text-transform: capitalize;
+      font-weight: normal;
+    }
+
+    .col_left p {
+      margin-top: 15px;
+    }
+
+    .col_right {
+      margin-top: 30px;
+      display: inline-block;
+      width: 300px;
+      font-family: "Raleway", sans-serif;
+      vertical-align: top;
+      margin-top: 0;
+    }
+
+    .col_right ul {
+      list-style: none;
+    }
+
+    .lista a {
+      text-decoration: none;
+      color: #000000;
+      border-bottom: 1px solid black;
+    }
+
+    .lista li {
+      margin-bottom: 20px;
+    }
+
+    .lista h2 {
+      font-family: "Raleway", sans-serif;
+      color: #16a085;
+      text-transform: capitalize;
+      font-weight: bold;
+      margin-bottom: 23px;
+    }
+
+    .col {
+      display: inline-block;
+      vertical-align: top;
+      width: 320px;
+      text-align: justify;
+    }
+
+    ul {
+      padding: 0;
+      list-style: none;
+      font-family: "Raleway", sans-serif;
+    }
+
+    .listar {
+      display: inline-block;
+      list-style: none;
+      box-sizing: border-box;
+      font-family: "Raleway", sans-serif;
+      width: 368px;
+    }
+
+    .footer {
+      background-color: #1e1b1a;
+      color: white;
+      padding: 30px;
+    }
+
+    .footer_row {
+      width: 1024px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .footer_row a {
+      color: white;
+      font-weight: bold;
+    }
+
+    .listal h2 {
+      color: #ffffff;
+      padding: 10px;
+      font-family: "Raleway", sans-serif;
+      box-sizing: border-box;
+      padding-bottom: 20px;
+    }
+
+    .listal a {
+      text-decoration: none;
+      color: #627084;
+      font-family: "Raleway", sans-serif;
+      box-sizing: border-box;
+    }
+
+    .listal li {
+      margin-bottom: 15px;
+    }
+
+    .listal a:last-child {
+      border-bottom: 1px solid #627084;
+    }
+
+    .listal h2 {
+      color: #ffffff;
+      padding: 10px;
+      font-family: "Raleway", sans-serif;
+      box-sizing: border-box;
+      padding-bottom: 30px;
+    }
+
+    .listar a {
+      padding: 0px;
+      text-decoration: none;
+      color: #627084;
+      font-family: "Raleway", sans-serif;
+      box-sizing: border-box;
+      padding-top: 10px;
+    }
+
+    .listar li {
+      margin-bottom: 15px;
+    }
+
+    .listar a:last-child {
+      border-bottom: 1px solid #627084;
+    }
+
+    .follow {
+      color: #627084;
+      font-family: "Raleway", sans-serif;
+      width: 473px;
+      padding-right: 50px;
+      padding-top: 10px;
+      box-sizing: border-box;
+      padding-left: 10px;
+      margin-right: 6px;
+    }
+
+    .follow h2 {
+      color: #ffffff;
+      font-family: "Raleway", sans-serif;
+      margin-bottom: 25px;
+    }
+
+    .social {
+      list-style: none;
+    }
+
+    .social li {
+      display: inline-block;
+      padding-right: 10px;
+      margin-top: 15px;
+    }
+
+    .footer2 {
+      overflow: hidden;
+      background-color: #16a085;
+
+      padding: 85px;
+    }
+
+    .footer2 p {
+      text-align: center;
+      color: #ffffff;
+      font-family: "Raleway", sans-serif;
+      font-size: 0.8em;
+    }
+  </style>
+</head>
+<body>
+      <div class="wrapper">
+  
+          <div class="header">
+  
+              <ul class="menu">
+  
+                  <li><a href="#">HomePage</a>
+  
+                  </li>
+  
+                  <li><a href="#">About</a>
+  
+                  </li>
+  
+                  <li><a href="#">Blog</a>
+  
+                  </li>
+  
+                  <li><a href="#">Contact</a>
+  
+                  </li>
+              </ul>
+          </div>
+  
+          <div class="grassy">
+              <h1>GRASYGREEN</h1>
+              <h2>Design by Pablo Monteserín</h2>
+          </div>
+  
+          <div class="pic"></div>
+  
+          <div class="caja">
+  
+  
+              <div class="col_left">
+  
+                  <h2>Integer sit amet aliquet</h2>
+                  <h3>Phasellus nec erat sit amet nibh pellentesque congue</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur architecto earum odio tenetur,
+                      ccusamus consectetur? Quibusdam, minima fugit, debitis sapiente libero dolorem beatae sed officiis,
+                      at
+                      a, dicta fugiat cumque!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur
+                      architecto
+                      earum odio tenetur, accusamus consectetur? Quibusdam, minima fugit, debitis sapiente libero dolorem
+                      beatae sed officiis, at a, dicta fugiat cumque!Lorem ipsum dolor sit amet, consectetur adipisicing
+                      elit.
+                      Consequatur architecto earum odio tenetur, accusamus consectetur? </p>
+  
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur architecto earum odio tenetur,
+                      accusamus consectetur? Quibusdam, minima fugit, debitis sapiente libero dolorem beatae sed officiis,
+                      at
+                      a, dicta fugiat cumque!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur
+                      architecto
+                      earum odio tenetur, accusamus consectetur? Quibusdam, minima fugit, debitis sapiente libero dolorem
+                      beatae sed officiis, at a, dicta fugiat cumque!Quibusdam, minima fugit, debitis sapiente libero
+                      dolorem
+                      beatae sed officiis, at a, dicta fugiat cumque</p>
+  
+              </div>
+  
+              <div class="col_right">
+                  <h2>Integer sit amet aliquet</h2>
+  
+                  <ul class="lista">
+                      <li><a href="#">accusamus consectetur? Quibusdam</a>
+  
+                      </li>
+  
+                      <li><a href="#">accusamus consectetur? Quibusdam</a>
+  
+                      </li>
+  
+                      <li><a href="#">accusamus consectetur? Quibusdam</a>
+  
+                      </li>
+  
+                      <li><a href="#">accusamus consectetur? Quibusdam</a>
+  
+                      </li>
+  
+                      <li><a href="#">accusamus consectetur? Quibusdam</a>
+  
+                      </li>
+  
+                      <li><a href="#">accusamus consectetur? Quibusdam</a>
+  
+                      </li>
+  
+                      <li><a href="#">accusamus consectetur? Quibusdam</a>
+  
+                      </li>
+  
+                  </ul>
+              </div>
+          </div>
+          <div class="footer">
+  
+              <div class="footer_row">
+                  <div class="col">
+                      <h2>LATEST POSTS</h2>
+  
+                      <ul class="listal">
+                          <li><a href="#">accusamus consectetur? Quibusdam</a>
+  
+                          </li>
+  
+                          <li><a href="#">accusamus consectetur? Quibusdam</a>
+  
+                          </li>
+  
+                          <li><a href="#">accusamus consectetur? Quibusdam</a>
+  
+                          </li>
+  
+                          <li><a href="#">accusamus consectetur? Quibusdam</a>
+  
+                          </li>
+  
+                          <li><a href="#">accusamus consectetur? Quibusdam</a>
+  
+                          </li>
+  
+                          <li><a href="#">accusamus consectetur? Quibusdam</a>
+  
+                          </li>
+  
+                          <li><a href="#">accusamus consectetur? Quibusdam</a>
+  
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="col">
+  
+                      <ul class="listar">
+  
+                          <h2>POPULAR LINKS</h2>
+                          <li><a href="#">accusamus consectetur? Quibusdam</a>
+  
+                          </li>
+  
+                          <li><a href="#">accusamus consectetur? Quibusdam</a>
+  
+                          </li>
+  
+                          <li><a href="#">accusamus consectetur? Quibusdam</a>
+  
+                          </li>
+  
+                          <li><a href="#">accusamus consectetur? Quibusdam</a>
+  
+                          </li>
+  
+                          <li><a href="#">accusamus consectetur? Quibusdam</a>
+  
+                          </li>
+  
+                          <li><a href="#">accusamus consectetur? Quibusdam</a>
+  
+                          </li>
+  
+                          <li><a href="#">accusamus consectetur? Quibusdam</a>
+  
+                          </li>
+  
+                      </ul>
+                  </div>
+                  <div class="col">
+  
+                      <h2>FOLLOW US</h2>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda minima perferendis ducimus ut
+                          perspiciatis, consectetur voluptatum neque eius ratione iste, fugiat error laboriosam porro,
+                          unde,
+                          ex necessitatibus obcaecati quam velit.</p>
+  
+                      <ul class="social">
+  
+                          <li><a href="#"><img src="img/fbck.png"
+                                      alt=""></a>
+  
+                          </li>
+  
+                          <li><a href="#"><img src="img/gplus.png"
+                                      alt=""></a>
+  
+                          </li>
+  
+                          <li><a href="#"><img
+                                      src="img/pinterest.png"
+                                      alt=""></a>
+  
+                          </li>
+  
+                          <li><a href="#"><img
+                                      src="img/twiiterblue.png"
+                                      alt=""></a>
+  
+                          </li>
+  
+                          <li><a href="#"><img src="img/youtube.jpg"
+                                      alt=""></a>
+  
+                          </li>
+  
+                          <li><a href="#"><img
+                                      src="img/rss-80x80.png"></a>
+  
+                          </li>
+  
+                          <li><a href="#"><img
+                                      src="img/tumbler.png"></a>
+  
+                          </li>
+                      </ul>
+  
+                  </div>
+              </div>
+          </div>
+      </div>
+  
+      <div class="footer2">
+  
+  
+          <p>© Untitled. All rights reserved. | Photos by Me | Design by Pablo Monteserín</p>
+  
+  
+      </div>
+  
+  
+      </div>
+  
+  
+      </div>
+  
+  
+      </div>
+  </body>
+  
+  </html>

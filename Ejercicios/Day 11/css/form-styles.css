@@ -1,0 +1,24 @@
+input[required] {
+  border: solid 4px black;
+}
+
+input:not([type=submit]):valid {
+  background: palegreen;
+}
+
+input:not([type=submit]):invalid {
+  background: salmon;
+}
+
+input {
+  width: 200px;
+}
+
+input[type=range] {
+  margin: 0;
+}
+
+label {
+  width: 150px;
+  display: inline-block;
+}

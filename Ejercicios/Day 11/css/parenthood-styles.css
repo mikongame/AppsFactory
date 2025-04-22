@@ -1,0 +1,54 @@
+body {
+  text-align: center;
+  font-family: arial;
+  color: black;
+}
+
+#ventana {
+  width: 60%;
+  height: 400px;
+  margin: 0 auto;
+}
+
+#ventana div:nth-child(2) {
+  width: 94%;
+  height: 100%;
+  /*background: black;*/
+  float: left;
+}
+
+#ventana div:nth-child(2) div {
+  width: 100%;
+}
+
+#ventana div:nth-child(2) div:nth-child(2) {
+  background: orange;
+  height: 90%;
+}
+
+#ventana div:nth-child(2) div:not(:nth-child(2)) {
+  height: 5%;
+}
+
+#ventana div:nth-child(2) div:first-child {
+  background-color: blue;
+}
+
+#ventana div:nth-child(2) div:last-child {
+  background-color: yellow;
+  float: left;
+}
+
+#ventana div:not(:nth-child(2)) {
+  width: 3%;
+  height: 100%;
+  float: left;
+}
+
+#ventana div:first-child {
+  background-color: green;
+}
+
+#ventana div:last-child {
+  background-color: red;
+}

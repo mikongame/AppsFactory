@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .popup-container {
+      height: 300px;
+    }
+    a .capaFlotante {
+      background-image: url(img/back2.jpg);
+      width: 100px;
+      height: 100px;
+      position: absolute;
+      margin-left: 20px;
+      margin-top: 20px;
+      display: none;
+    }
+
+    a:hover .capaFlotante {
+      color: black;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div class="popup-container">
+      <a href="#">
+          <span>Enlace</span>
+          <div class="capaFlotante"></div>
+      </a>
+  </div>
+  </body>
+</html>
