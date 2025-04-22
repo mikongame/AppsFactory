@@ -85,6 +85,7 @@ function guardarGaleriaStorage() {
 
 // Función para recuperar la galería desde el localStorage
 function recuperarGaleriaStorage() {
+    document.querySelector('#lightbox').style.display = 'none';
     let texto = localStorage.getItem('galeria');
     if (texto !== null) {
         arrayGaleria = texto.split('//');
