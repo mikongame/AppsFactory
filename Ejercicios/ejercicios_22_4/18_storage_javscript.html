@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section {width: 250px;margin:auto;padding:20px;border:1px solid grey}
+    </style>
+</head>
+<body>
+    <section>
+        <input type="text" id="producto">
+        <button type="button">Añadir</button>
+        <hr>
+        <ul></ul>
+    </section>
+    <script>
+        //array vacío para añadir los productos
+        let productos = [] 
+
+        //lista con los nodos de los productos
+        const LISTA = document.querySelector('ul')
+
+        //activar evento para añadir productos
+        document.querySelector('button').onclick = nuevoProducto
+
+        //recuperar los productos del storage 
+        leerStorage()
+
+        function nuevoProducto() {
+            let producto = document.querySelector('#producto').value.trim()
+
+            //confeccionar nodo producto
+            nodoProducto(producto)
+
+            //guardar producto en el array
+            productos.push(producto)
+
+            //guardar el array en el storage de javascript
+            guardarStorage()
+        }
+
+        function guardarStorage() {
+            //transformar un array en una cadena de texto
+            let productosTexto = productos.join('/')
+
+            //guardar la cadena de texto en el storage
+            localStorage.setItem('productos', productosTexto)
+        }
+
+        function leerStorage() {
+            productosStorage = localStorage.getItem('productos')?.split('/')
+
+            //asignación a variable condicionada
+            productos = productosStorage ? productosStorage : []
+
+            //confeccionar el nodo para cada elemento del array
+            productos.forEach(producto => nodoProducto(producto))
+           
+        }
+
+        function nodoProducto(producto) {
+            let li = document.createElement('li')
+            li.textContent = producto 
+           
+            LISTA.appendChild(li)
+        }
+
+    </script>
+</body>
+</html>
