@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Vinos con Ordenación</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <main>
+        <h1>Lista de Vinos Tintos</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Vino 
+                        <button onclick="ordenarTabla('wine')">↑↓</button>
+                    </th>
+                    <th>Bodega 
+                        <button onclick="ordenarTabla('winery')">↑↓</button>
+                    </th>
+                    <th>Denominación 
+                        <button onclick="ordenarTabla('location')">↑↓</button>
+                    </th>
+                    <th>Foto botella</th>
+                </tr>
+            </thead>
+            <tbody id="vinos-tbody"></tbody>
+        </table>
+    </main>
+    <script src="js/script.js"></script>
+
+</body>
+</html>

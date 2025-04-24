@@ -1,0 +1,79 @@
+<style>
+    body {
+        background-color: #f4f7fa;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: #001F54; /* Azul Marino Oscuro */
+    }
+
+    main {
+        width: 60%;
+        margin: 40px auto;
+        border: 2px solid #5A9BD5; /* Azul Celeste */
+        border-radius: 12px;
+        padding: 20px;
+        background-color: #ffffff;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+        text-align: center;
+        color: #5A9BD5; /* Azul Celeste */
+        margin-bottom: 20px;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    th, td {
+        border: 1px solid #cccccc;
+        padding: 10px;
+        text-align: center;
+        color: #001F54; /* Azul Marino Oscuro */
+    }
+
+    thead {
+        background-color: #E6F0FF; /* Suave para no romper la paleta */
+        color: #0047AB; /* Azul Cobalto */
+    }
+
+    th {
+        position: relative;
+    }
+
+    button {
+        background-color: #5A9BD5; /* Azul Celeste */
+        color: #fff;
+        border: none;
+        border-radius: 6px;
+        padding: 4px 8px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.1s ease;
+        margin-left: 5px;
+        font-size: 0.9rem;
+    }
+
+    button:hover {
+        background-color: #EA711B; /* Naranja Quemado */
+        transform: scale(1.05);
+    }
+
+    img {
+        max-width: 80px;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    }
+
+    tr:nth-child(even) {
+        background-color: #F9FBFD;
+    }
+
+    tr:hover {
+        background-color: #FF7043; /* Naranja Atardecer */
+        color: #fff;
+    }
+</style>
