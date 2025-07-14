@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;500&display=swap');
+
+* {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.actividades {
+  width: 50%;
+  margin: auto;
+  border: 2px solid grey;
+  padding: 20px;
+}
+
+.titulo {
+  color: red;
+}
+
+.direccion {
+  color: green;
+}

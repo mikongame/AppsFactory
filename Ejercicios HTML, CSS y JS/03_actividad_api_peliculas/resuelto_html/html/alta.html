@@ -1,0 +1,54 @@
+<div class='row'>
+  <div class='column col-8'>
+    <form id="formulario" enctype="multipart/form-data">
+      <div class="row mb-3">
+        <label class="col-sm-2 col-form-label" for="titulo">Título</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="titulo" name="titulo" required>
+        </div>
+      </div>
+      <div class="row mb-3">
+        <label class="col-sm-2 col-form-label" for="idcategoria">Categoría</label>
+        <div class="col-sm-10">
+          <select class="form-select" id="idcategoria" name="idcategoria" aria-label="Categorias" required >
+            <option disabled selected value="0">Seleccione una categoría</option>
+          </select>
+        </div>
+      </div>
+      <div class="row mb-3">
+        <label class="col-sm-2 col-form-label" for="direccion">Dirección</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="direccion" name="direccion" required>
+        </div>
+      </div>
+      <div class="row mb-3">
+        <label class="col-sm-2 col-form-label" for="anio">Año</label>
+        <div class="col-sm-10">
+          <input type="number" class="form-control" id="anio" name="anio" required min='1930' max='2100'>
+        </div>
+      </div>
+      <div class="row mb-3">
+        <label class="col-sm-2 col-form-label" for="portada">Portada</label>
+        <div class="col-sm-10">
+          <input type="file" class="form-control" id="portada" name="portada" accept='image/*'>
+        </div>
+      </div>
+      <div class="row mb-3">
+        <label class="col-sm-2 col-form-label" for="sinopsis">Sinopsis</label>
+        <div class="col-sm-10">
+          <textarea class="form-control" id="sinopsis" name="sinopsis" rows="5" required></textarea>
+        </div>
+      </div>
+      <hr>
+      <button type="button" class="btn btn-primary" id="btnalta">Alta película</button> <!-- NOTA: type="button" -->
+    </form>
+
+    <br>
+    <div class="alert alert-danger d-none" id="alerta">
+      <!-- Aquí meteremos los errores dinámicamente -->
+    </div>
+  </div>
+  <div class='column col-4'>
+    <img src='assets/img/sinportada.jpg' alt="previsualizar" id='previsualizar'>
+  </div>
+</div>

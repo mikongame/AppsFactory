@@ -1,0 +1,14 @@
+body {
+  margin: 0;
+  font-family: 'Indie Flower', cursive;
+  background-color: #f5f5f5;
+}
+
+img {
+  max-width: 100%;
+}
+
+.errores {
+  color: red;
+  font-size: 0.9em;
+}

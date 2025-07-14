@@ -1,0 +1,17 @@
+form input, form textarea {
+  display: block;
+  margin: 10px 0;
+  width: 100%;
+  padding: 8px;
+}
+
+.errores {
+  color: red;
+  font-size: 0.9rem;
+}
+
+#previsualizar {
+  width: 100%;
+  border: 1px solid #ccc;
+  padding: 5px;
+}

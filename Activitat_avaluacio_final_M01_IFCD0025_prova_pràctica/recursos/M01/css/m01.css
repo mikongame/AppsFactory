@@ -1,0 +1,116 @@
+.parrafo-ej1 {
+    line-height: 30px;
+    text-align: justify;
+}
+
+.parrafo-ej1 .azul {
+    color: blue;
+}
+
+#seccion2 {
+    background-image: url('../img/fondo.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 20px;
+    overflow: auto;
+}
+
+.contenedor-ej2 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.contenedor-ej2 img {
+    width: 250px;
+    height: auto;
+}
+
+.texto-derecha {
+    flex: 1;
+    max-height: 100%;
+}
+
+.texto-derecha p {
+    margin: 0;
+}
+
+.texto-inferior {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.tabla-ej3 {
+    margin: 0 auto;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.tabla-ej3 th, .tabla-ej3 td {
+    border: 3px  grey;
+    border-style: double;
+    padding: 10px;
+}
+
+.tabla-ej3 th {
+    font-weight: bold;
+}
+
+.lista-ordenada-ej3 {
+    list-style-type: upper-alpha;
+    margin-top: 20px;
+}
+
+.lista-no-ordenada-ej3 {
+    list-style-type: square;
+    margin-top: 20px;
+}
+
+.contenedor-ej4 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.caja {
+    width: 200px;
+    height: 200px;
+    border: 2px solid blue;
+}
+
+.circulo {
+    border-radius: 50%;
+}
+
+.contenedor-ej4 .azul {
+    background-color: #5A9BD5;
+}
+
+.naranja {
+    background-color: #EA711B;
+}
+
+.verde {
+    background-color: #4CAF50;
+}
+
+.morado {
+    background-color: #9C27B0;
+}
+
+.contenedor-ej5 {
+    width: 500px;
+    height: 300px;
+    border: 2px solid blue;
+    margin: 0 auto;
+    position: relative;
+}
+
+.imagen-css3 {
+    position: absolute;
+    top: 50px;
+    left: 100px;
+}

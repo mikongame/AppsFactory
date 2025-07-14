@@ -1,0 +1,21 @@
+.vino {
+  position: relative;
+  width: 150px;
+  height: 200px;
+  overflow: hidden;
+}
+
+.vino img {
+  width: 100%;
+  height: auto;
+}
+
+.eliminar {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  max-width: 24px;
+  cursor: pointer;
+}
+
+

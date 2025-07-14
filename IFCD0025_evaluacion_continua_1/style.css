@@ -1,0 +1,279 @@
+/* Global */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #ADD8E6;
+}
+
+.container {
+  width: 60%;
+  margin: 20px auto;
+  padding: 10px;
+  background-color: #ADD8E6;
+  box-sizing: border-box;
+}
+
+/* Cabecera */
+header {
+  height: 80px;
+  background-color: #D3D3D3;
+  border: 3px solid blue;
+  border-radius: 10px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 20px;
+  color: blue;
+  font-weight: bold;
+}
+
+.logo {
+  height: 40px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+/* Navegación */
+nav {
+  height: 40px;
+  background-color: #D3D3D3;
+  border: 3px solid blue;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+  justify-content: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  flex: 1;
+  display: flex;
+  justify-content: space-around;
+}
+
+nav a {
+  display: flex;
+  align-items: center;
+  width: 80%;
+  height: 30px;
+  background-color: #90EE90;
+  color: purple;
+  text-decoration: none;
+  border: 1px solid blue;
+  border-radius: 6px;
+  transition: background-color 0.3s;
+  justify-content: center;
+}
+
+nav a:hover {
+  background-color: cyan;
+}
+
+/* Sección principal */
+main {
+  margin-top: 5px;
+  background-color: #D3D3D3;
+  border: 3px solid blue;
+  border-radius: 10px;
+}
+
+.contenido {
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* Columnas */
+.left-box,
+.right-box {
+  width: 50%;
+  background-color: white;
+  border-radius: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.form-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.form-row label {
+  width: 60px;
+  text-align: right;
+  font-weight: bold;
+}
+
+.checks {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.btn-container {
+  text-align: center;
+  margin-top: 10px;
+}
+
+#resultado {
+  font-size: 20px;
+  color: blue;
+  font-weight: bold;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.caja-amarilla {
+  background-color: #FFD700;
+  height: 80px;
+  width: 80%;
+  margin: 20px auto 0;
+  border: 2px solid #B4A970;
+  box-sizing: border-box;
+}
+
+.img-contenido {
+  float: left;
+  width: 50%;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #aaa;
+}
+
+/* Texto y combo */
+.texto-contenido {
+  text-align: justify;
+  font-size: 14px;
+}
+
+.selector-fondo {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+select {
+  width: 100%;
+  padding: 5px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 20px;
+}
+
+/* Pie de página */
+footer {
+  margin-top: 5px;
+  height: 80px;
+  background-color: #D3D3D3;
+  border: 3px solid blue;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer p {
+  margin: 10px;
+}
+
+/* Responsive */
+@media screen and (max-width: 960px) {
+  .container {
+    width: 90%;
+  }
+
+  header {
+    height: auto;
+    padding: 10px 0;
+  }
+
+  .logo {
+    height: 25px;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+  }
+
+  nav {
+    flex-direction: column;
+    height: auto;
+    padding: 10px 0;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav li {
+    width: 100%;
+  }
+
+  nav a {
+    width: 70%;
+  }
+
+  .contenido {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .left-box,
+  .right-box {
+    width: 90%;
+    margin-bottom: 10px;
+  }
+
+  .form-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .form-row label {
+    width: auto;
+    text-align: left;
+    margin-bottom: 4px;
+  }
+
+  .form-row input,
+  .checks {
+    width: 100%;
+  }
+
+  .img-contenido {
+    float: none;
+    display: block;
+    width: 100%;
+    margin: 0 auto 10px auto;
+  }
+
+  .texto-contenido {
+    margin-top: 10px;
+  }
+}
+
+

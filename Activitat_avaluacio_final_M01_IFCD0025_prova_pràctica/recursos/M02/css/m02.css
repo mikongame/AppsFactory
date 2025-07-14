@@ -1,0 +1,21 @@
+#javascript article {
+	width: 55%;
+	border:  2px solid lightskyblue;
+	padding: 20px;
+	margin: 10px auto;
+}
+
+table#resultado {margin: auto}
+table#resultado, table#resultado td {border: 1px solid blue; padding:  2px}
+label {width:100px; display: inline-block;	vertical-align: top}
+#js1, #js2, #js3 {text-align: center;}
+
+/*clase para hacer girar la hélice*/
+.girar {
+	transition: transform 10s;
+	transform: rotate(3600deg);
+}
+
+.oculto {
+    display: none;
+}

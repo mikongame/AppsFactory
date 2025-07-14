@@ -1,0 +1,11 @@
+.detalle {
+  border: 1px solid #ccc;
+  padding: 10px;
+  background-color: #f9f9f9;
+}
+
+.detalle img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}

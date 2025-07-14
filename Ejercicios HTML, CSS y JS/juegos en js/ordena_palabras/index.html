@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ordena la Frase</title>
+  <style>
+    .palabra {
+      display: inline-block;
+      margin: 5px;
+      padding: 5px 10px;
+      background: lightblue;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .respuesta {
+      margin-top: 20px;
+      min-height: 40px;
+      border: 2px dashed gray;
+      padding: 10px;
+    }
+
+    .respuesta .palabra {
+      background: lightgreen;
+    }
+
+    button {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Ordena la frase</h1>
+  <div id="frase-original"></div>
+
+  <h2>Tu respuesta</h2>
+  <div id="respuesta" class="respuesta"></div>
+
+  <button onclick="evaluar()">Evaluar</button>
+  <p id="resultado"></p>
+
+  <script src="script.js"></script>
+</body>
+</html>

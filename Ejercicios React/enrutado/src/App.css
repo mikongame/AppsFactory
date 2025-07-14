@@ -1,0 +1,76 @@
+/* Reset básico y estilo general */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+/* NAVBAR */
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #222;
+  padding: 12px;
+}
+nav a {
+  text-decoration: none;
+  color: white;
+  background-color: #444;
+  padding: 10px 15px;
+  margin: 5px;
+  border-radius: 4px;
+  transition: background-color 0.3s, color 0.3s;
+}
+nav a:hover {
+  background-color: #666;
+}
+nav a.active {
+  background-color: #8a2be2;
+  color: gold;
+}
+
+/* CONTENEDOR DE MICROIMÁGENES */
+.micros {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 30px;
+}
+
+/* IMAGEN DE MICRO EN INICIO */
+.micro {
+  width: 200px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.micro img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.micro:hover {
+  transform: scale(1.05);
+}
+
+/* FICHA INDIVIDUAL DE MICRO */
+.ficha {
+  max-width: 400px;
+  margin: 50px auto;
+  text-align: center;
+  padding: 20px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+}
+.ficha img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}

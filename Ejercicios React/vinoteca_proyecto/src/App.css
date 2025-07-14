@@ -1,0 +1,22 @@
+.vino {
+  position: relative;
+  margin: 1rem;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.vino img.eliminar {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.5rem;
+}

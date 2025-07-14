@@ -1,0 +1,125 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f2f2f2;
+}
+
+body h1, h2 {
+  text-align: center;
+  color: black;
+}
+
+.App {
+  width: 600px;
+  padding: 20px;
+  border: 1px solid grey;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Banderas */
+img {
+  width: 100%;
+  vertical-align: center;
+}
+
+.idiomas {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.bandera {
+  width: 75px;
+  margin: 10px;
+  cursor: pointer;
+  transition: transform 0.2s, filter 0.2s;
+  border: 2px dotted transparent;
+  border-radius: 6px;
+}
+
+.bandera:hover {
+  filter: brightness(1.2);
+  transform: scale(1.05);
+  border: 2px dotted blue;
+}
+
+/* Botones */
+.botones {
+  text-align: center;
+}
+
+.botones button {
+  width: 150px;
+  padding: 5px;
+  margin: 10px;
+  border-radius: 5px;
+  color: white;
+  background-color: brown;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.botones button:hover {
+  background-color: #a52a2a;
+  transform: scale(1.05);
+  border: 2px dotted blue;
+}
+
+/* Profesora y Ubicación */
+.profesora,
+.ubicacion {
+  width: 100%;
+  text-align: center;
+  border-radius: 8px;
+  background-color: brown;
+  padding: 15px 0px;
+  color: white;
+  margin: auto;
+}
+
+.profesora h2,
+.ubicacion h2{
+  text-align: center;
+  color: white;
+  margin: auto;
+}
+
+.foto img {
+  border-radius: 8px;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.foto img {
+  border-radius: 8px;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.nombre {
+  font-weight: bold;
+  padding: 5px 0px;
+  color: white;
+}
+
+.botones button.activo {
+  border-color: #ffffff;
+  transform: scale(1.2);
+}
+
+.bandera.activo {
+  border-color: #ffffff;
+  transform: scale(1.2);
+}

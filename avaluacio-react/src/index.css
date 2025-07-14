@@ -1,0 +1,87 @@
+/* Tipografía y fondo */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Georgia', serif;
+  background-color: #fdfdfd;
+  color: #111;
+  background-image: url('https://www.transparenttextures.com/patterns/paper-fibers.png');
+}
+
+/* Navbar similar a cabecera EMT */
+.navbar {
+  background-color: #000;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+}
+
+.navbar a {
+  color: #fff;
+  margin: 0 1rem;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+/* Contenedor general */
+.container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+/* Títulos */
+h1, h2 {
+  font-family: 'Georgia', serif;
+  text-align: left;
+  font-weight: normal;
+  margin-bottom: 1rem;
+}
+
+/* Lista de noticias estilo EMT */
+.news-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.news-card {
+  border-top: 4px solid #000;
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.news-card img {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.news-card img:hover {
+  opacity: 0.8;
+}
+
+/* Sección de favoritos */
+.favorites {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.favorites img {
+  width: 100px;
+  height: auto;
+  cursor: pointer;
+  border: 2px solid #333;
+}

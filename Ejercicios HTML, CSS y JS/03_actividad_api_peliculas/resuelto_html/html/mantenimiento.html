@@ -1,0 +1,89 @@
+<div class="row">
+  <div class="column col-8">
+    <!-- Alerta de película no encontrada -->
+    <div class="alert alert-warning d-none" role="alert">
+      <h4>Película no existe</h4>
+    </div>
+  </div>
+
+  <div class="column col-8">
+    <div class="card m-auto">
+      <form id="formulario" enctype="multipart/form-data">
+        <div class="card-body">
+
+          <!-- Título de la película -->
+          <h2 class="card-title">
+            <input id="titulo" name="titulo" type="text" class="form-control" required placeholder="Título de la película">
+          </h2>
+
+          <hr>
+
+          <!-- Categoría -->
+          <div class="row mb-2">
+            <label for="idcategoria" class="col-sm-2 col-form-label">
+              <h5 class="card-subtitle mb-2 text-muted">Categoría</h5>
+            </label>
+            <div class="col-sm-8">
+              <select id="idcategoria" name="idcategoria" class="form-select" required>
+                <option value="0" disabled selected>Seleccione una categoría</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Dirección -->
+          <h5 class="card-subtitle mb-2 text-muted">
+            Dirección:
+            <input id="direccion" name="direccion" class="form-control" required placeholder="Dirección">
+          </h5>
+
+          <!-- Año -->
+          <h5 class="card-subtitle mb-2 text-muted">
+            Año:
+            <input id="anio" name="anio" type="number" min="1930" max="2100" class="form-control" required placeholder="Año">
+          </h5>
+
+          <hr>
+
+          <!-- Sinopsis -->
+          <div class="mb-3">
+            <textarea id="sinopsis" name="sinopsis" class="form-control" rows="5" required placeholder="Sinopsis de la película"></textarea>
+          </div>
+
+          <hr>
+
+          <!-- Portada -->
+          <div class="mb-3">
+            <input type="file" class="form-control" name="portada" id="portada" accept="image/*">
+          </div>
+
+          <hr>
+
+          <!-- Botones de acción -->
+          <div class="d-flex justify-content-between">
+            <button type="submit" class="btn btn-warning">Modificar película</button>
+            <button type="submit" class="btn btn-danger">Baja película</button>
+            <span onclick="cargarSeccion('consulta')" class="btn btn-outline-primary">Volver a listado</span>
+          </div>
+
+        </div>
+      </form>
+
+      <br>
+
+      <!-- Alerta de errores del formulario -->
+      <div class="alert alert-danger d-none" id="alerta">
+        <div>El título es obligatorio.</div>
+        <div>Se debe seleccionar una categoría.</div>
+        <div>Dirección es obligatoria.</div>
+        <div>Año es obligatorio.</div>
+        <div>Sinopsis es obligatoria.</div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="column col-4">
+    <!-- Imagen de previsualización -->
+    <img src="assets/img/sinportada.jpg" alt="Previsualizar portada" id="previsualizar" class="img-fluid rounded">
+  </div>
+</div>
