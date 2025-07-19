@@ -1,10 +1,10 @@
-// services/firebase-config.js
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
+import { FIREBASE_API_KEY } from '@env';
 
 // ⚠️ Sustituye por tu propia configuración de Firebase
 const firebaseConfig = {
-  apiKey: "AIzaSyBdbMub-ZloO6HQtqwCDpdQ0FjZTB9sUdc",
+  apiKey:  FIREBASE_API_KEY,
   authDomain: "panaderia-app-cb0da.firebaseapp.com",
   projectId: "panaderia-app-cb0da",
   storageBucket: "panaderia-app-cb0da.firebasestorage.app",
